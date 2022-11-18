@@ -1,0 +1,16 @@
+{
+    "node_name": "dcc-consul-server1",
+    "server": true,
+    "ui_config": {
+      "enabled": true
+    },
+    "data_dir": "/consul/data",
+    "addresses": {
+      "http": "0.0.0.0"
+    },
+    "retry_join": ["dcc-consul-server2"],
+    "connect": {
+      "enabled": true
+    }
+  }
+  
