@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  dcc-consul-server1:
+    image: consul:latest
+    container_name: dcc-consul-server1
+    restart: always
+
+    ports:
+      - "8500:8500"
+    
+    command: "agent -bootstrap-expect=2"
+
+    networks:
+      - dcc-network
+    
+    volumes:
+      - ./server1.json:/consul/config/server1.json:ro
+
+  dcc-consul-server2:
+    image: consul:latest
+    container_name: dcc-consul-server2
+    restart: always
+    
+    command: "agent -bootstrap-expect=2"
+
+    networks:
+      - dcc-network
+    
+    volumes:
+      - ./server2.json:/consul/config/server2.json:ro
+
+networks:
+  dcc-network:
+    external: true
+    name: dcc-network
