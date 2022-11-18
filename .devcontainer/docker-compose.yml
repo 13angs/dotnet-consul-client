@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  dotnet-consul-client:
+    image: mcr.microsoft.com/devcontainers/dotnet:0-6.0
+    container_name: dotnet-consul-client
+
+    volumes:
+      - ..:/workspaces/dotnet-consul-client:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    command: sleep infinity
+
+    networks:
+      - dcc-network
+
+networks:
+  dcc-network:
+    name: dcc-network

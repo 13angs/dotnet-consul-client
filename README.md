@@ -1,1 +1,1 @@
-# dotnet-consul-register
+# Dotnet consul register

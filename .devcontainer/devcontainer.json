@@ -1,0 +1,25 @@
+{
+	"name": "Dotnet consul client",
+	// "image": "mcr.microsoft.com/devcontainers/dotnet:0-6.0",
+	"service": "dotnet-consul-client",
+	"dockerComposeFile": "docker-compose.yml",
+	"workspaceFolder": "/workspaces/dotnet-consul-client",
+	"shutdownAction": "stopCompose",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		}
+	}
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [5000, 5001],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "dotnet restore",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
